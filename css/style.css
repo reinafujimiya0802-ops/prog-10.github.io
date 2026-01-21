@@ -1,23 +1,8 @@
 @charset "utf-8";
-
-
-/*Google Fontsの読み込み
----------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
-
-
-/*Font Awesomeの読み込み
----------------------------------------------------------------------------*/
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
-
-
-/*テンプレート専用cssファイルの読み込み
----------------------------------------------------------------------------*/
 @import url("inview.css");
 
-
-/*opa1のキーフレーム設定
----------------------------------------------------------------------------*/
 @keyframes opa1 {
 	0% {opacity: 0;}
 	100% {opacity: 1;}
@@ -49,22 +34,16 @@
 }
 
 
-/*テキストのフェードイン設定
----------------------------------------------------------------------------*/
-/*アニメーション設定*/
+
 @keyframes fadeIn {
 	0% {opacity: 0;transform: scale(0.1) rotate(-30deg);}
 	100% {opacity: 1;transform: scale(1) rotate(0deg);}
 }
 
-/* 初期状態でテキストを非表示にする */
 .fade-in-text {
     visibility: hidden;
 }
 
-/* アニメーションを適用するクラス。
-animationの行の「0.2s」が文字の出現のなめらかさで、大きいほどなめらかに出てきます。小さいとタイピングのようにカクカク出ます。
-１文字ずつの出現する際の時差は、js/main.jsの「テキストのフェードイン効果」の中にある「0.1」で調整できます。*/
 .char {
     display: inline-block;
     opacity: 0;
@@ -72,55 +51,49 @@ animationの行の「0.2s」が文字の出現のなめらかさで、大きい�
 }
 
 
-/*全体の設定
----------------------------------------------------------------------------*/
+/*bodyの設定*/
+
 body * {box-sizing: border-box;}
 
 html,body {
 	height: 100%;
-	font-size: 13px;	/*基準となるフォントサイズ。*/
+	font-size: 13px;
 }
 
-	/*画面幅900px以上の追加指定*/
-	@media screen and (min-width:900px) {
+
+@media screen and (min-width:900px) {
 
 	html, body {
-		font-size: 14px;	/*基準となるフォントサイズ。*/
+		font-size: 14px;
 	}
 
-	}/*追加指定ここまで*/
+	}
 
 
 body {
 	margin: 0;padding: 0;
-	font-family: "Zen Maru Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+	font-family: "Zen Maru Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	-webkit-text-size-adjust: none;
-	line-height: 2.5;		/*行間*/
-	background: #463f39;	/*背景色*/
+	line-height: 2.5;
+	background: #f0ffff;
 	color: var(--primary-inverse-color);	/*文字色。冒頭のprimary-inverse-colorを読み込みます。*/
 	overflow-x: hidden;
 }
 
-/*リセット他*/
 figure {margin: 0;}
 dd {margin: 0;}
 nav ul {list-style: none;}
 nav,ul,li,ol {margin: 0;padding: 0;}
 section li {margin-left: 1rem;}
 
-/*table全般の設定*/
 table {border-collapse:collapse;}
 
-/*画像全般の設定*/
 img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
 
-/*videoタグ*/
 video {max-width: 100%;}
 
-/*iframeタグ*/
 iframe {width: 100%;}
 
-/*他*/
 input {font-size: 1rem;}
 
 
